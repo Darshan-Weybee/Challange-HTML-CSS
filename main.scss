@@ -3,17 +3,14 @@
     height: 90px;
 }
 #logo{
-    width: 235px;
     margin-bottom: 0px;
-    margin-top: -2px;
+    margin-top: 8px;
 }
 #logo_desc{
-    width: 230px;
     font-size: 10px;
     padding-left: 0px;
     margin-top: -2px;
     color: white;
-
 }
 #cart{
     color: white;
@@ -34,17 +31,16 @@
     display: flex;
     align-items: center;
    ul{
+        display: flex;
         li{
             list-style-type: none;
             margin-right: 10px;
-            display: inline-block;
             a{
                 color: white;
                 text-decoration: none;
                 font-size: 15px;
                 padding-right: 2px;
                 margin-bottom: 10px;
-
             }
         }
     }
@@ -71,6 +67,7 @@
                 text-align: center;
                 padding: 8px;
                 margin-bottom: 5px;
+                background-image: linear-gradient(to right, greenyellow, green, greenyellow);
             }
         }
         .video{
@@ -144,8 +141,6 @@
             padding: 8px;
             background-color: green;
             color: white;
-            width: 790px;
-
         }
     }
 }
@@ -156,12 +151,20 @@
     color: white;
 }
 .footer{
+    background-color: black;
     ul{
+        display: flex;
         li{
-            a{
-                
-            }
+            margin: 25px 15px 25px 15px;
+            list-style-type: none;
+            color: white;   
+            text-align: center; 
         }
+    }
+    .icon{
+        float: right;
+        margin-top: -70px;
+        margin-right: 35px;
     }
 }
 
