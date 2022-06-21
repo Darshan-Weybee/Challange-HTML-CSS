@@ -1,0 +1,271 @@
+:root{
+    --greenyellow: greenyellow;
+    --black: black;
+    --navbar-upper: rgb(49, 49, 49);
+    --navbar-lower: rgb(185, 184, 184); 
+    --white: white;
+    --grey: rgb(216, 215, 215);
+    --green: green;
+    --yellow: yellow;
+    --greenish:  rgb(92, 148, 9);
+    --orange: rgb(240, 116, 15);
+    --transparentwhite: rgb(255,255,255,0.5);
+    --trasparent:rgb(255,255,255,0);
+    --middle:rgb(255,255,255,0.1);
+    --whitish:rgb(255,255,255,0.9);
+}
+.container {
+    background-color: var(--black);
+    height: 6em ;
+  }
+  #logo {
+    margin-bottom: 0;
+    margin-top: 1em;
+  }
+  #logo_desc {
+    font-size: 0.5rem;
+    padding-left: 0;
+    margin-top: -0.2px;
+    color: white;
+  }
+  #cart {
+    color: white;
+    font-size: 0.6rem;
+    width: 20%;
+    float: right;
+    margin-top: -9em;
+    margin-right: -10em;
+  }
+  .navbar {
+    float: right;
+    margin-top: -6em;
+    background-image: linear-gradient(180deg, var(--navbar-upper), var(--navbar-lower));
+    border-radius: 1.5em;
+    width: 380px;
+    height: 35px;
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+  }
+  .navbar ul {
+    display: flex;
+  }
+  .navbar ul li {
+    list-style-type: none;
+    margin-right: 1em;
+  }
+  .navbar ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding-right: 0.4em;
+  }
+  .navbar ul li a:hover{
+    background-color: var(--greenyellow);
+    padding: 0.7em;
+    color: var(--black);
+  }
+  .navbar{
+    margin-top: -3em;
+  }
+  #home {
+    background-color: var(--greenyellow);
+    padding: 0.7em;
+  }
+  .back img{
+        position: relative;
+        width: 100%;
+        height: 20em;
+  }
+  .back .text{
+    margin-top: -16em;
+    position: absolute;
+    padding: 0.3em 0 0.2em 0.3em;
+    background-image: linear-gradient(to left, var(--trasparent),var(--transparentwhite),var(--whitish));
+    width: 40%;
+  }
+  .parent {
+    display: flex;
+  }
+  .parent .sidebar {
+    width: 60%;
+  }
+  .parent .sidebar ul {
+    border: 0.3em solid var(--white);
+    border-radius: 0.6em;
+    margin-top: 0.5em;
+    background-color: var(--grey);
+    padding: 0;
+  }
+  .parent .sidebar ul li {
+    list-style-type: none;
+    /* border: 1px solid red; */
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.7em;
+    margin-bottom: 0.4em;
+    background-image: linear-gradient(to right, var(--greenyellow), var(--green), var(--greenyellow));
+    cursor: default;
+  }
+  .parent .sidebar ul li a{
+    text-decoration: none;
+    color: var(--black);
+  }
+  .parent .sidebar ul li a:hover{
+    color: var(--yellow);
+  }
+  /*#category a:hover{
+    color: yellow;
+  }*/
+  #category{
+    font-size: 1.4rem;
+    background-image: linear-gradient(180deg, var(--navbar-upper), var(--navbar-lower));
+    
+  }
+  .parent .sidebar .video {
+    height: 8em;
+    margin-top: -0.3em;
+    margin-bottom: -1em;
+  }
+  .parent .sidebar .text {
+    font-size: 1.25rem;
+    text-align: center;
+    color: var(--greenish);
+    padding-top: 0em;
+  }
+  .parent .sidebar .background-before .before{
+    margin-top: -0.4em;
+    text-align: center;
+    padding: 1em;
+    background-color: var(--transparentwhite);
+    font-size: 1.1rem;
+  }
+  .parent .sidebar .background-before{
+    background-image: url(https://media.istockphoto.com/photos/big-and-small-flooring-tiles-made-of-natural-stone-granite-or-marble-picture-id1012344672);
+    height: 2em;
+    padding-top: 8em;
+    padding-bottom: 0.6em;
+  }
+  .parent .sidebar .background-after{
+    background-image: url(https://thumbs.dreamstime.com/b/floor-tiles-4618048.jpg);
+    height: 2em;
+    padding-top: 8em;
+    padding-bottom: 0.6em;
+  }
+  .parent .sidebar .background-after .after{  
+    margin-top: -0.4em;
+    text-align: center;
+    padding: 1em;
+    background-color: var(--transparentwhite);
+    font-size: 1.1rem;
+}
+  .parent .sidebar .click {
+    margin-top: 0.8em;
+    padding: 0.6em;
+    font-weight: bold;
+    border-radius: 1.6em;
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+  }
+  .parent .sidebar .button {
+    text-align: center;
+  }
+  .parent .sidebar .click:hover{
+    color: black;
+  }
+  .parent .content .welcome {
+    padding-left: 1em;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .parent .content #biotech {
+    color: var(--greenish);
+  }
+  .parent .content .intro {
+    padding-left: 1.5em;
+    font-size: 1.1rem;
+    line-height: 1.9em;
+    justify-content: left;
+  }
+  .parent .content .intro1 {
+    padding-left: 1.5em;
+    font-size: 1.1rem;
+    line-height: 1.9em;
+    justify-content: left;
+    margin-top: -0.1em;
+  }
+  .parent .content .clickhere {
+    width: 35%;
+    border: none;
+    float: right;
+    margin-right: 2em;
+    text-align: center;
+    padding: 0.4em;
+    line-height: 1.9rem;
+    font-size: x-large;
+    border-radius: 0.5em;
+    background-color: var(--green);
+    color: var(--white);
+    margin-top: -5em;
+  }
+  .parent .content .clickhere #click{
+    color: var(--greenyellow);
+    cursor: pointer;
+  }
+  .parent .content .clickhere #click:hover{
+    color: black;
+  }
+  .parent .content .equipment {
+    text-align: center;
+    margin-bottom: 2em;
+    margin-top: 1em;
+  }
+  .parent .content .logos {
+    display: flex;
+    margin-top: 1em;
+    margin-left: 2em;
+    width: 50em;
+    height: 6.5em;
+  }
+  .parent .content .logos img{
+    margin-left: 1.5em;
+  }
+  .parent .content .more_info {
+    margin-left: 2em;
+    margin-top: 2em;
+    border: none;
+    padding: 0.7em;
+    background-color: var(--green);
+    color: var(--white);
+  }
+  .footer {
+    background-color: var(--black);
+  }
+  .footer ul {
+    display: flex;
+    margin-left: 3.5em;
+  }
+  .footer ul li {
+    margin: 1.5em 1.5em;
+    list-style-type: none;
+    color: var(--white);
+    text-align: center;
+  }
+  .footer ul li a{
+    text-decoration: none;
+    color: var(--white);
+  }
+  .footer ul li a:hover{
+    color: var(--black);
+    background-color: var(--greenyellow);
+    padding: 0.2em;
+  }
+  .footer .icon {
+    float: right;
+    margin-top: -4em;
+    margin-right: 10em;
+  }
+
