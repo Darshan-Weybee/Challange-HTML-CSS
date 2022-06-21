@@ -27,31 +27,21 @@
 .navbar {
   float: right;
   margin-top: -50px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#313131), to(#b9b8b8));
-  background-image: linear-gradient(180deg, #313131, #b9b8b8);
+  background-image: linear-gradient(180deg, rgb(49, 49, 49), rgb(185, 184, 184));
   border-radius: 15px;
   width: 380px;
   height: 35px;
   margin-right: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .navbar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .navbar ul li {
   list-style-type: none;
   margin-right: 10px;
 }
-
 .navbar ul li a {
   color: white;
   text-decoration: none;
@@ -67,82 +57,65 @@
 }
 
 .parent {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .parent .sidebar {
   width: 30%;
 }
-
 .parent .sidebar ul {
   border: 1px solid white;
   border-radius: 5px;
   margin-top: 7px;
-  background-color: #d8d7d7;
+  background-color: rgb(216, 215, 215);
   padding: 0;
 }
-
 .parent .sidebar ul li {
   list-style-type: none;
   border: 1px solid red;
   text-align: center;
   padding: 8px;
   margin-bottom: 5px;
-  background-image: -webkit-gradient(linear, left top, right top, from(greenyellow), color-stop(green), to(greenyellow));
   background-image: linear-gradient(to right, greenyellow, green, greenyellow);
 }
-
 .parent .sidebar .video {
   height: 140px;
   margin-top: -6px;
   margin-bottom: -12px;
 }
-
 .parent .sidebar .text {
   font-size: 20px;
   text-align: center;
-  color: #5c9409;
+  color: rgb(92, 148, 9);
 }
-
 .parent .sidebar .click {
   margin-top: 20px;
   padding: 8px;
   font-weight: bold;
   border-radius: 15px;
-  background-color: #f0740f;
+  background-color: rgb(240, 116, 15);
   color: white;
   border: none;
 }
-
 .parent .sidebar .button {
   text-align: center;
 }
-
 .parent .content {
   width: 70%;
 }
-
 .parent .content .welcome {
   padding-left: 20px;
   font-size: 22px;
   font-weight: 500;
 }
-
 .parent .content #biotech {
-  color: #5c9409;
+  color: rgb(92, 148, 9);
 }
-
 .parent .content #intro {
   padding-left: 20px;
   font-size: 18px;
   line-height: 35px;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  justify-content: left;
 }
-
 .parent .content #button {
   width: 40%;
   border: none;
@@ -157,23 +130,16 @@
   color: white;
   margin-top: -60px;
 }
-
 .parent .content .equipment {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 50px;
 }
-
 .parent .content .logos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   margin-top: 45px;
 }
-
 .parent .content .more_info {
   margin-left: 25px;
   margin-top: 20px;
@@ -186,31 +152,24 @@
 #category {
   font-size: 22px;
   letter-spacing: 1px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#313131), to(#b9b8b8));
-  background-image: linear-gradient(180deg, #313131, #b9b8b8);
+  background-image: linear-gradient(180deg, rgb(49, 49, 49), rgb(185, 184, 184));
   color: white;
 }
 
 .footer {
   background-color: black;
 }
-
 .footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .footer ul li {
   margin: 25px 15px 25px 15px;
   list-style-type: none;
   color: white;
   text-align: center;
 }
-
 .footer .icon {
   float: right;
   margin-top: -70px;
   margin-right: 35px;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
