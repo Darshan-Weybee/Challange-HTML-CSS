@@ -14,6 +14,9 @@
     --middle:rgb(255,255,255,0.1);
     --whitish:rgb(255,255,255,0.9);
 }
+body{
+  margin: 0;
+}
 .contain{
     width: 60%;
     margin: auto;
@@ -22,78 +25,79 @@
     background-color: var(--black);
     height: 6em ;
   }
-  #logo {
-    margin-bottom: 0;
-    margin-top: 1em;
+  .menu{
+    display: none;
+  }
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   #logo_desc {
     font-size: 0.5rem;
-    padding-left: 0;
-    margin-top: -0.2px;
     color: white;
   }
-  #cart {
+  .sideheader{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     margin-right: 0.8em;
+  }
+  .cart{
     color: white;
     font-size: 0.6rem;
-    width: 20%;
-    float: right;
-    margin-top: -9em;
-    margin-right: -10em;
+    text-align: right;
+    margin-right: 0.8em;
+  }
+  .exit{
+    display: none;
   }
   .navbar {
-    float: right;
-    margin-top: -6em;
     background-image: linear-gradient(180deg, var(--navbar-upper), var(--navbar-lower));
     border-radius: 1.5em;
     width: 380px;
     height: 35px;
-    margin-right: 1em;
     display: flex;
+    margin: 1.5em 0 0 0;
     align-items: center;
   }
   .navbar ul {
     display: flex;
-    flex-direction: column;
+    gap: 0.8em;
   }
   .navbar ul li {
     list-style-type: none;
-    margin-right: 1em;
   }
   .navbar ul li a {
     color: var(--white);
     text-decoration: none;
     font-size: 0.8rem;
-    padding-right: 0.4em;
+    padding: 0.7em;
   }
   .navbar ul li a:hover{
     background-color: var(--greenyellow);
-    padding: 0.7em;
     color: var(--black);
   }
-  .navbar{
-    margin-top: -3em;
-  }
-  #home {
+
+  .active a{
     background-color: var(--greenyellow);
-    padding: 0.7em;
+  }
+  .back{
+    position: relative;
   }
   .back img{
-        position: relative;
-        width: 100%;
-        height: 20em;
+    width: 100%;
+    height: 20em;
   }
   .back .text{
-    margin-top: -16em;
     position: absolute;
     padding: 0.3em 0 0.2em 0.3em;
     background-image: linear-gradient(to left, var(--trasparent),var(--transparentwhite),var(--whitish));
     width: 40%;
+    top: 28%;
   }
   .parent {
     display: flex;
-  }
-  .parent .sidebar {
-    width: 60%;
   }
   .parent .sidebar ul {
     border: 0.3em solid var(--white);
@@ -120,13 +124,9 @@
   .parent .sidebar ul li a:hover{
     color: var(--yellow);
   }
-  /*#category a:hover{
-    color: yellow;
-  }*/
-  #category{
+  .parent .sidebar ul .category{
     font-size: 1.4rem;
     background-image: linear-gradient(180deg, var(--navbar-upper), var(--navbar-lower));
-    
   }
   .parent .sidebar .video {
     height: 8em;
@@ -140,33 +140,38 @@
     padding-top: 0em;
   }
   .parent .sidebar .background-before .before{
-    margin-top: -0.4em;
     text-align: center;
     padding: 1em;
     background-color: var(--transparentwhite);
     font-size: 1.1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
   .parent .sidebar .background-before{
     background-image: url(https://media.istockphoto.com/photos/big-and-small-flooring-tiles-made-of-natural-stone-granite-or-marble-picture-id1012344672);
-    height: 2em;
-    padding-top: 8em;
-    padding-bottom: 0.6em;
+    height: 10.5em;
+    position: relative;
   }
   .parent .sidebar .background-after{
     background-image: url(https://thumbs.dreamstime.com/b/floor-tiles-4618048.jpg);
-    height: 2em;
-    padding-top: 8em;
-    padding-bottom: 0.6em;
+    height: 10.5em;
+    position: relative;
+    margin-top: 1em;
   }
   .parent .sidebar .background-after .after{  
-    margin-top: -0.4em;
     text-align: center;
     padding: 1em;
     background-color: var(--transparentwhite);
     font-size: 1.1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
   .parent .sidebar .click {
-    margin-top: 0.8em;
+    margin-top: 1em;
     padding: 0.6em;
     font-weight: bold;
     border-radius: 1.6em;
@@ -181,6 +186,9 @@
   .parent .sidebar .click:hover{
     color: black;
   }
+  .parent .content{
+    width: 80%;
+  }
   .parent .content .welcome {
     padding-left: 1em;
     font-size: 1.5rem;
@@ -189,32 +197,33 @@
   .parent .content #biotech {
     color: var(--greenish);
   }
+  .sidecontent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
   .parent .content .intro {
     padding-left: 1.5em;
     font-size: 1.1rem;
     line-height: 1.9em;
-    justify-content: left;
   }
   .parent .content .intro1 {
     padding-left: 1.5em;
     font-size: 1.1rem;
     line-height: 1.9em;
-    justify-content: left;
     margin-top: -0.1em;
   }
   .parent .content .clickhere {
-    width: 35%;
+    width: 65%;
     border: none;
-    float: right;
-    margin-right: 2em;
     text-align: center;
-    padding: 0.4em;
-    line-height: 1.9rem;
+    padding: 0.7em;
+    line-height: 1.5em;
     font-size: x-large;
     border-radius: 0.5em;
     background-color: var(--green);
     color: var(--white);
-    margin-top: -5em;
   }
   .parent .content .clickhere #click{
     color: var(--greenyellow);
@@ -229,11 +238,18 @@
     margin-top: 1em;
   }
   .parent .content .logos {
-    display: flex;
+    /* display: flex;
+    flex-wrap: wrap;
     margin-top: 1em;
     margin-left: 2em;
     width: 100%;
-    height: 6.5em;
+    height: 6.5em; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7em;
+    justify-content: space-between;
+    margin-left: 0;
+    width: 100%;
   }
   .parent .content .logos img{
     margin-left: 1.5em;
@@ -245,136 +261,306 @@
     padding: 0.7em;
     background-color: var(--green);
     color: var(--white);
+    text-align: center;
   }
   .footer {
+    position: relative;
     background-color: var(--black);
+    height: 8em;
   }
   .footer ul {
     display: flex;
-    margin-left: 3.5em;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
   }
   .footer ul li {
-    margin: 1.5em 1.5em;
     list-style-type: none;
     color: var(--white);
-    text-align: center;
+    margin-top: 2em;
   }
   .footer ul li a{
     text-decoration: none;
     color: var(--white);
+    padding: 0.8em;
   }
   .footer ul li a:hover{
     color: var(--black);
     background-color: var(--greenyellow);
-    padding: 0.2em;
+  }
+  .facebook{
+    width: 25px;
+  }
+  .twitter{
+    width: 25px;
   }
   .footer .icon {
-    float: right;
-    margin-top: -4em;
-    margin-right: 10em;
+    position: absolute;
+    bottom: 32%;
+    right: 6%;
   }
-@media only screen and (max-width: 600px){
-    .contain{
-        width: 100%;
-    }
-    .back .text{
-        width: 100%;
-    }
-
-    .parent{
-        display: flex;
-        flex-wrap: wrap;
-    }
+  @media only screen and (max-width: 1660px){
+      .footer{
+        height: 9em;
+      }
+      .footer .icon {
+        position: absolute;
+        bottom: 35%;
+        right: 4%;
+      }
+  }
+  @media only screen and (max-width: 1420px){
     .parent .sidebar{
-        width: 100%;
-    }
-    .parent .sidebar .video{
-      height: auto;
-    }
-    .parent .sidebar .text{
-        padding-top: 0.6em;
-    }
-    .parent .sidebar .background-before{
-      margin-top: 0.3em;
-      height: auto;
-      padding-bottom: 0;
-    }
-    .parent .sidebar .background-after{
-      margin-top: 1em;
-      height: auto;
-      padding-bottom: 0;
-    }
-    .parent .sidebar .click{
-      margin-top: 2em;
+      width: 35%;
     }
     .parent .content .clickhere{
-      display: block;
-      width: 95%;
-      margin: 0 0 1em 0.2em;
-    }
-    .content .intro{
-      display: block;
-    }
-    .parent .content .more_info{
-      width: 95%;
       margin-left: 0.2em;
-      line-height: 1.5em;
-      text-align: center;
     }
     .parent .content .logos{
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 0;
+    }
+    .parent .content .more_info{
+      line-height: 1.5em;
+      margin-left: 0em;
+      text-align: center;
+    }
+    .footer{
+      height: 11em;
     }
     .footer ul{
       display: flex;
       flex-wrap: wrap;
-    }
-    .footer ul li{
-        margin-left: 0em;
-        line-height: 1em;
+      flex-direction: row;
     }
     .footer .icon{
-      margin-right: 0;
-      margin-bottom: 0;
+        bottom: 30%;
+        right: 6%;
     }
-    nav.menu-btn{
-      display: block;
-    }
-    .exit{
-      cursor: pointer;
-      right: 0;
-      padding: 0.5em 0.2em 0em 20em;
-
-    }
-    .menu{
-      float: right;
-      margin: -4.5em 1em 0 0;
-      width: 6%;
-      cursor: pointer;
-    }
-    .navbar{
-      display: none;
-    }
-    nav{
-      position: fixed;
-      z-index: 999;
-      right: 0;
-      top: 9em;
-      height: 10em;
-      padding: 0em 0em 10em 0em;
-    }
-    nav li a{
-      margin-left: 18em;
-    }
-
-
-
-
-
-
-
-
-    #cart{
-        display: none;
-    }
+  }
+@media only screen and (max-width: 1080px){
+  .contain{
+    width: 100%;
+  }
+  .parent .sidebar{
+    width: 30%;
+  }
+  .parent .sidebar .text {
+    font-size: 1.23rem;
+    padding-left: 0.1em;
+  }
+  /* .parent .content .more_info{
+    line-height: 1.5em;
+    margin-left: 0em;
+    text-align: center;
+  } */
+  /* .parent .content .logos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0;
+  } */
+  .footer{
+    height: 11em;
+  }
+  /* .footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  } */
+  .footer .icon{
+      bottom: 35%;
+      right: 10%;
+  }
+}
+@media only screen and (max-width: 768px){
+  .contain{
+    width: 100%;
+  }
+  .parent .sidebar{
+    width: 100%;
+  }
+  nav.menu-btn{
+    display: block;
+    background-image: none;
+  }
+  .exit{
+    display: block;
+    cursor: pointer;
+    padding: 0em 0em 0em 20em;
+    width: 10%;
+  }
+  .sideheader{
+    position: relative;
+  }
+  .menu{
+    position: absolute;
+    display: block;
+    background-color: white;
+    width: 30%;
+    right: 0;
+    cursor: pointer;
+  }
+  .navbar{
+    display: none;
+  }
+  nav{
+    position: absolute;
+    z-index: 999;
+    right: 0.3em;
+    top: 3em;
+    height: 10em;
+    padding: 0em 0em 11em 0em;
+    background-color: black;
+  }
+  nav ul{
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  nav ul li{
+    padding: 0em 1em 0.5em 0;
+  }
+  .cart{
+    padding: 0em 0 6.5em 0;
+  }
+  .back .text{
+    width: 100%;
+    top: 18%;
+  }
+  .parent{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .parent .sidebar ul  .category{
+    display: none;
+  }
+  .parent .sidebar ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 0.8em;
+    justify-content: left;
+    background: none;
+  }
+  .parent .sidebar .text{
+    font-size: 1.24rem;
+  }
+  .parent .content{
+    width: 100%;
+  }
+  .parent .sidecontent{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .parent .content .intro{
+    line-height: 1.5em;
+  }
+  .parent .content .clickhere{
+    width: 100%;
+    padding: 0.3em 0;
+    margin: 0 0.5em 0.8em 0.5em;
+  }
+  /* .parent .content .more_info{
+    line-height: 1.5em;
+    margin-left: 0em;
+    text-align: center;
+  } */
+  /* .parent .content .logos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0;
+  } */
+  .footer{
+    height: 9em;
+  }
+  /* .footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  } */
+  .footer .icon{
+      bottom: 18%;
+      right: 8%;
+  }
+}
+@media only screen and (max-width: 600px){
+  .contain{
+      width: 100%;
+  }
+  .back .text{
+      width: 100%;
+      top: 18%;
+  }
+  .parent .sidebar ul .category{
+    display: flex;
+    font-size: 1.4rem;
+    background-image: linear-gradient(180deg, var(--navbar-upper), var(--navbar-lower));
+  }
+  .parent{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .parent .sidebar{
+      width: 100%;
+  }
+  .parent .sidebar ul li{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .parent .sidebar .video{
+    height: auto;
+  }
+  .parent .sidebar .text{
+      padding-top: 0.6em;
+  }
+  .parent .sidebar .click{
+    margin-top: 1.6em;
+  }
+  .parent .content{
+    width: 100%;
+  }
+  .parent .sidecontent{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .parent .content .intro{
+    line-height: 1.5em;
+  }
+  .parent .content .clickhere{
+    width: 100%;
+    padding: 0.3em 0;
+    margin: 0 0.5em 0.8em 0.5em;
+  }
+  /* .parent .content .more_info{
+    line-height: 1.5em;
+    margin-left: 0em;
+    text-align: center;
+    width: 100%;
+  } */
+  /* .parent .content .logos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0;
+  } */
+  .footer{
+    height: 10em;
+    width: 100%;
+  }
+  /* .footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  } */
+  .footer .icon{
+      bottom: 25%;
+      right: 1%;
+  }
+  .cart{
+    padding: 0em 0 6.5em 0;
+  }
 }
